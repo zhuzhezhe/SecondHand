@@ -11,7 +11,10 @@ import com.jfinal.core.JFinal;
 import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
 import com.jfinal.plugin.c3p0.C3p0Plugin;
 import com.secondHand.controller.AdminController;
+import com.secondHand.controller.ApiClassifyController;
 import com.secondHand.controller.ApiController;
+import com.secondHand.controller.ApiGoodsController;
+import com.secondHand.controller.ApiUsersController;
 import com.secondHand.controller.DownloadController;
 import com.secondHand.controller.IndexController;
 import com.secondHand.model.Admin;
@@ -38,9 +41,16 @@ public class CommonConfig extends JFinalConfig{
 	 */
 	public void configRoute(Routes me) {
 		
-		me.add("/", IndexController.class);  //主页
+		me.add("/", IndexController.class, "/home");  //主页
 		me.add("/admin", AdminController.class);  //后台
-		me.add("/api", ApiController.class);  //api接口
+		
+		//api接口
+		me.add("/api", ApiController.class);
+		me.add("/api/users", ApiUsersController.class);
+		me.add("/api/goods", ApiGoodsController.class);
+		me.add("/api/classify", ApiClassifyController.class);
+		
+		
 		me.add("/download", DownloadController.class);  //下载
 	}
 	

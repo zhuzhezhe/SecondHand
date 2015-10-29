@@ -2,6 +2,7 @@
     <wb-module deploy-name="secondHand01">
         <wb-resource deploy-path="/" source-path="/WebRoot" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/res"/>
         <property name="context-root" value="secondHand01"/>
         <property name="java-output-path" value="/secondHand01/WebRoot/WEB-INF/classes"/>
     </wb-module>
